@@ -1,0 +1,43 @@
+{
+  "name": "web-template",
+  "version": "1.0.0",
+  "description": "A template for a web-app based on Vite and TypeScript.",
+  "keywords": [
+    "WebApp",
+    "Template",
+    "Vite.js",
+    "TypeScript"
+  ],
+  "homepage": "https://github.com/Bylothink/web-template#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bylothink/web-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bylothink/web-template/issues"
+  },
+  "author": {
+    "name": "Matteo Bilotta",
+    "email": "me@byloth.dev",
+    "url": "https://www.byloth.dev/"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --build",
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@byloth/eslint-config-typescript": "^3.2.2",
+    "@eslint/compat": "^1.4.1",
+    "@types/node": "^22.18.13",
+    "husky": "^9.1.7",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  },
+  "private": true
+}
