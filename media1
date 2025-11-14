@@ -1,0 +1,87 @@
+/*
+-----------
+MEDIA VOTI
+-----------
+scrivere un programma per la gestione della media scolastica.
+
+permettere all'utente di inserire 5 votazioni (tra 1 e 10 compresi)
+e calcolare la media finale dei voti.
+
+stampare a video la media solo se tutti i voti inseriti
+saranno voti validi.
+se non lo sono, stampare un messaggio di errore.
+*/
+const VOTO_MINIMO = 1;
+const VOTO_MASSIMO = 10;
+const NUMERO_VOTI = 5;
+
+let media = NaN;
+let totaleVoti = NaN;
+
+const voto1 = Number(prompt("inserire il primo voto: "));
+if (voto1 >= VOTO_MINIMO && voto1 <= VOTO_MASSIMO)
+{
+    const voto2 = Number(prompt("inserire il secondo voto: "));
+    if (voto2 >= VOTO_MINIMO && voto2 <= VOTO_MASSIMO)
+    {
+        const voto3 = Number(prompt("inserire il terzo voto: "));
+        if (voto3 >= VOTO_MINIMO && voto3 <= VOTO_MASSIMO)
+        {
+            const voto4 = Number(prompt("inserire il quarto voto: "));
+            if (voto4 >= VOTO_MINIMO && voto4 <= VOTO_MASSIMO)
+            {
+                const voto5 = Number(prompt("inserire il quinto voto: "));
+                if (voto5 >= VOTO_MINIMO && voto5 <= VOTO_MASSIMO)
+                {
+                    totaleVoti = (voto1 + voto2 + voto3 + voto4 + voto5);
+                    media = totaleVoti / NUMERO_VOTI;
+                    alert("la tua è media: " + media);
+                }
+                else
+                {
+                    alert("voto inserito non valido");
+                }
+            }
+            else
+            {
+                alert("il voto inserito non è valido");
+            }
+        }
+        else
+        {
+            alert("il voto inserito non è valido");
+        }
+    }
+    else
+    {
+        alert("il voto inserito non è valido");
+    }
+}
+else
+{
+    alert("il voto inserito non è valido");
+}
+
+// il controllo dei voti può essere fatto anche in un solo if con tutti && 
+
+/*
+SE VOLESSI FARLO IN UN CICLIO WHILE:
+let isValid = true;
+let sum = 0;
+let indice = 0;
+while ((isValid) && (indice < 5))
+{
+    const numeroProva = Number(prompt("inserire numero: "));
+    if ((numeroProva < 1) || (numeroProva > 10))
+    {
+        isValid = false;
+        alert("numero non valido");
+    }
+    else
+    {
+        sum += numeroProva;
+    }
+    indice += 1;
+}
+
+*/
